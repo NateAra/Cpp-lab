@@ -2,17 +2,6 @@
 
 using namespace std;
 
-/* Exercise:
-    * Sales: 95, 000
-    * State Tax: 4%
-    * County Tax: 2%
-    * Show you total sales
-    * Show how much state tax you need to pay
-    * Show how much county tax you need to pay
-    * Show how much is your Total tax you have to pay
-*/
-
-
 int main() {
     int totalSales = 95000;
     const double stateTax = 0.04;
@@ -30,5 +19,3 @@ int main() {
     cout << "Total Profit: $" << totalProfit << endl;
     return 0;
 }
-
-
