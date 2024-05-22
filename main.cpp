@@ -2,10 +2,7 @@
 
 int main() {
     int x =10;
-    int y = 5;
-    double sum = x + y;
-    double difference = x - y;
-    std::cout << "Sum: " << sum << std::endl;
-    std::cout << "Difference: " << difference << std::endl;
+    int y = ++x;
+    std::cout << y << std::endl;
     return 0;
 }
