@@ -10,8 +10,8 @@ using namespace std;
 */
 
 int main() {
-    double fahrenheit;
     cout << "Enter Temperature in F: ";
+    double fahrenheit;
     cin >> fahrenheit;
 
     double celsius = (fahrenheit - 32) / 1.8;
