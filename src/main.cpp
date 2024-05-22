@@ -1,21 +1,23 @@
 #include <iostream>
+#include "cmath"
 
 using namespace std;
 
 /* Exercise
-    * Write a program to convert a temperature from Fahrenheit to Celsius.
-    * Out Enter Fahrenheit
-    * User inputs Fahrenheit
-    * Program Converts to Celsius and outputs it.
-*/
+    * Write a program to calculate the area of a circle
+        * The program should ask the user to enter the radius of a circle
+        * And then print the area of a circle.
+ */
 
 int main() {
-    cout << "Enter Temperature in F: ";
-    double fahrenheit;
-    cin >> fahrenheit;
+    cout << "Enter radius: ";
 
-    double celsius = (fahrenheit - 32) / 1.8;
-    cout << "The Temperature is: " << celsius << "C" << endl;
+    double radius;
+    cin >> radius;
 
+    const double pi = 3.14159265359;
+    double area = pi * pow(radius, 2);
+
+    cout << area << endl;
     return 0;
 }
