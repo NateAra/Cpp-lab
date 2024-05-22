@@ -3,6 +3,9 @@
 int main() {
     int x =10;
     int y = 5;
-    std::cout << x + y;
+    double sum = x + y;
+    double difference = x - y;
+    std::cout << "Sum: " << sum << std::endl;
+    std::cout << "Difference: " << difference << std::endl;
     return 0;
 }
