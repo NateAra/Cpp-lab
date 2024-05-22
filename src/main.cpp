@@ -1,23 +1,24 @@
 #include <iostream>
-#include "cmath"
-
-using namespace std;
+#include "ctime"
+#include "cstdlib"
 
 /* Exercise
-    * Write a program to calculate the area of a circle
-        * The program should ask the user to enter the radius of a circle
-        * And then print the area of a circle.
+    * Write a program for rolling dice.
+        * Every time the dice rolls we will get 2 random number 1 - 6.
+        * To limit the random use this formula: [rand() % (maxValue - minValue + 1)] + minValue
  */
 
+
 int main() {
-    cout << "Enter radius: ";
+    const int minValue = 1;
+    const int maxValue = 7;
 
-    double radius;
-    cin >> radius;
+    std::srand(time(0));
+    int dice1 = std::rand() % (maxValue - minValue) + minValue;
+    int dice2 = std::rand() % (maxValue - minValue) + minValue;
 
-    const double pi = 3.14159265359;
-    double area = pi * pow(radius, 2);
+    std::cout << "Dice 1: " << dice1 << std::endl;
+    std::cout << "Dice 2: " << dice2 << std::endl;
 
-    cout << area << endl;
     return 0;
 }
