@@ -2,12 +2,20 @@
 
 using namespace std;
 
-int main() {
-    int age;
+/* Exercise
+    * Write a program to convert a temperature from Fahrenheit to Celsius.
+    * Out Enter Fahrenheit
+    * User inputs Fahrenheit
+    * Program Converts to Celsius and outputs it.
+*/
 
-    cout << "Enter Age: ";
-    cin >> age;
-    cout << "Your age is: " << age << endl;
+int main() {
+    double fahrenheit;
+    cout << "Enter Temperature in F: ";
+    cin >> fahrenheit;
+
+    double celsius = (fahrenheit - 32) / 1.8;
+    cout << "The Temperature is: " << celsius << "C" << endl;
 
     return 0;
 }
