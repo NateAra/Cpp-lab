@@ -14,5 +14,10 @@ int main() {
     std::getline(std::cin, name);
     std::cout << "Hei, " << name << std::endl;
 
+    char letter = 'N';
+
+    std::cout << letter << std::endl;
+    std::cout << +letter;
+
     return 0;
 }
