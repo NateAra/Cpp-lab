@@ -15,9 +15,9 @@ int main() {
     const int cppStudents = 100;
     const int jsStudents = 50;
 
-    std::cout << std::left << "|" << std::setw(15) << "Course" << "|" << std::setw(15) << "Summer" << "|" << std::endl;
-    std::cout << std::left << "|" << std::setw(15) << "C++" << "|" << std::right << std::setw(15) << "100" << "|" << std::endl;
-    std::cout << std::left << "|" << std::setw(15) << "JavaScript" << "|" << std::right << std::setw(15) << "50" << "|" << std::endl;
+    std::cout << std::left << "|" << std::setw(15) << "Course" << "|" << std::setw(10) << "Student" << "|" << std::endl;
+    std::cout << std::left << "|" << std::setw(15) << "C++" << "|" << std::right << std::setw(10) << cppStudents << "|" << std::endl;
+    std::cout << std::left << "|" << std::setw(15) << "JavaScript" << "|" << std::right << std::setw(10) << jsStudents << "|" << std::endl;
 
     return 0;
 }
