@@ -8,14 +8,11 @@
 */
 
 int main() {
-    bool isValid = false;
-    bool isNotValid = true;
+    std::string name;
 
-    std::cout << isValid << std::endl;
-    std::cout << isNotValid << std::endl;
-    std::cout << std::boolalpha << isValid << std::endl;
-    std::cout << std::boolalpha << isNotValid << std::endl;
-    std::cout << std::noboolalpha << isValid << std::endl;
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, name);
+    std::cout << "Hei, " << name << std::endl;
 
     return 0;
 }
