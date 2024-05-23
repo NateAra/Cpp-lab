@@ -4,33 +4,26 @@
 #include "iomanip"
 
 /* Exercise
-    *  Write a program that asks the user a series of questions like:
-        * Street, City, State and Zipcode
-        * and then prints the user's address using this format:
-            *  Street
-            *  City, State, Zipcode
+    *  Write a program that asks the user for 3 names
+    *  Store these names in an array
+    *  Than print the first name.
 */
 
 int main() {
-    std::string street;
-    std::string city;
-    std::string state;
-    std::string zipcode;
+    std::string names[3];
 
-    std::cout << "Enter your Street: ";
-    std::getline(std::cin, street);
+    std::cout << "Enter 3 Names Please." << std::endl;
 
-    std::cout << "Enter your City: ";
-    std::getline(std::cin, city);
+    std::cout << "1st Names: ";
+    std::getline(std::cin, names[0]);
 
-    std::cout << "Enter your State: ";
-    std::cin >> state;
+    std::cout << "2nd Names: ";
+    std::getline(std::cin, names[1]);
 
-    std::cout << "Enter your ZipCode: ";
-    std::cin >> zipcode;
+    std::cout << "3rd Names: ";
+    std::getline(std::cin, names[2]);
 
-    std::cout << street << std::endl
-              << city << "," << zipcode << ","  << state;
+    std::cout << "The 1st name is: " << names[0];
 
     return 0;
 }
