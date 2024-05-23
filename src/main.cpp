@@ -3,13 +3,19 @@
 #include "cstdlib"
 #include "iomanip"
 
+/* Exercise
+    *  Find the size limit of a couple of data types
+*/
 
 int main() {
-    std::cout << std::numeric_limits<int>::min() << std::endl << std::numeric_limits<int>::max() << std::endl;
+    bool isValid = false;
+    bool isNotValid = true;
 
-    int number = std::numeric_limits<int>::min();
-    number--;
-    std::cout << number;
+    std::cout << isValid << std::endl;
+    std::cout << isNotValid << std::endl;
+    std::cout << std::boolalpha << isValid << std::endl;
+    std::cout << std::boolalpha << isNotValid << std::endl;
+    std::cout << std::noboolalpha << isValid << std::endl;
 
     return 0;
 }
