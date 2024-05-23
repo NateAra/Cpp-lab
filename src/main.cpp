@@ -3,11 +3,21 @@
 #include "cstdlib"
 #include "iomanip"
 
+/* Exercise
+    * Write a program for printing this table:
+        * |Course      |Student      |
+        * |C++         |          100|
+        * |JavaScript  |           50|
+*/
+
 
 int main() {
-    std::cout << std::fixed << std::setprecision(2) << 12.34567 << std::endl << 12.54 << std::endl;
-    std::cout << std::left;
-    std::cout << std::setw(15) << "Spring " << std::endl << std::setw(15) << "Summer" << std::endl;
+    const int cppStudents = 100;
+    const int jsStudents = 50;
+
+    std::cout << std::left << "|" << std::setw(15) << "Course" << "|" << std::setw(15) << "Summer" << "|" << std::endl;
+    std::cout << std::left << "|" << std::setw(15) << "C++" << "|" << std::right << std::setw(15) << "100" << "|" << std::endl;
+    std::cout << std::left << "|" << std::setw(15) << "JavaScript" << "|" << std::right << std::setw(15) << "50" << "|" << std::endl;
 
     return 0;
 }
