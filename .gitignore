@@ -35,3 +35,4 @@
 
 # Ignore build directories
 cmake-build-debug/
+main*
