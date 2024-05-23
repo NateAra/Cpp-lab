@@ -4,20 +4,33 @@
 #include "iomanip"
 
 /* Exercise
-    *  Find the size limit of a couple of data types
+    *  Write a program that asks the user a series of questions like:
+        * Street, City, State and Zipcode
+        * and then prints the user's address using this format:
+            *  Street
+            *  City, State, Zipcode
 */
 
 int main() {
-    std::string name;
+    std::string street;
+    std::string city;
+    std::string state;
+    std::string zipcode;
 
-    std::cout << "Enter your name: ";
-    std::getline(std::cin, name);
-    std::cout << "Hei, " << name << std::endl;
+    std::cout << "Enter your Street: ";
+    std::getline(std::cin, street);
 
-    char letter = 'N';
+    std::cout << "Enter your City: ";
+    std::getline(std::cin, city);
 
-    std::cout << letter << std::endl;
-    std::cout << +letter;
+    std::cout << "Enter your State: ";
+    std::cin >> state;
+
+    std::cout << "Enter your ZipCode: ";
+    std::cin >> zipcode;
+
+    std::cout << street << std::endl
+              << city << "," << zipcode << ","  << state;
 
     return 0;
 }
