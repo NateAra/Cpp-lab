@@ -5,10 +5,15 @@
 
 int main() {
     int x = 10;
-    int y = 3;
-    double z = x / static_cast<double >(y);
+    int y = 5;
+    bool result = x != y;
 
-    std::cout << z;
+    char first = 'A';
+    char second = 'a';
+    bool result2 = first == second;
+
+    std::cout << std::boolalpha;
+    std::cout << result << std::endl << result2;
 
     return 0;
 }
