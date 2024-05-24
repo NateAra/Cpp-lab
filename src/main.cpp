@@ -4,16 +4,10 @@
 #include "iomanip"
 
 int main() {
-    int x = 10;
-    int y = 5;
-    bool result = x != y;
 
-    char first = 'A';
-    char second = 'a';
-    bool result2 = first == second;
+    char age = 10;
+    bool isEligible = age >= 18 || age <= 65;
 
-    std::cout << std::boolalpha;
-    std::cout << result << std::endl << result2;
-
+    std::cout << std::boolalpha << !isEligible;
     return 0;
 }
