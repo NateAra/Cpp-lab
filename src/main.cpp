@@ -5,9 +5,12 @@
 
 int main() {
 
-    char age = 10;
-    bool isEligible = age >= 18 || age <= 65;
+    int age = 18;
+    int salary = 50'000;
+    const int baseSalary = 30'000;
 
-    std::cout << std::boolalpha << !isEligible;
+    bool isEligible = (age >= 18 && age <= 65) && (salary > baseSalary);
+
+    std::cout << std::boolalpha << isEligible;
     return 0;
 }
