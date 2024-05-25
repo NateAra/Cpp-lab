@@ -10,16 +10,24 @@
 */
 int main() {
 
-    double num1;
-    double num2;
+    int input;
+    
+    std::cout << "Enter a number between 1 - 3: ";
+    std::cin >> input;
 
-    std::cout << "Please Give 2 Numbers: ";
-
-    std::cin >> num1 >> num2;
-
-    double result = (num1 > num2) ? num1 : num2;
-
-    std::cout << "The larger Nr is: " << result;
+    switch (input) {
+        case 1:
+            std::cout << "You selected 1";
+            break;
+        case 2:
+            std::cout << "You selected 2";
+            break;
+        case 3:
+            std::cout << "You selected 3";
+            break;
+        default:
+            std::cout << "Goodbye";
+    }
 
     return 0;
 }
