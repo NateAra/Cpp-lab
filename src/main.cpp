@@ -9,16 +9,10 @@
 */
 int main() {
 
-    bool isCitizen = true;
-    bool caResident = true;
-    int tuition = 0;
+    int sales = 11'000;
+    double commission = (sales > 10'000) ? .1 : .05;
 
-    if (isCitizen) {
-        if (!caResident) tuition = 1000;
-    } else {
-        tuition = 3000;
-    }
-
+    std::cout << commission;
 
     return 0;
 }
