@@ -5,14 +5,21 @@
 
 
 /* Exercise
-    *
+    * Ask the user for two numbers.
+    * Store the larger value in a separate variable and print it.
 */
 int main() {
 
-    int sales = 11'000;
-    double commission = (sales > 10'000) ? .1 : .05;
+    double num1;
+    double num2;
 
-    std::cout << commission;
+    std::cout << "Please Give 2 Numbers: ";
+
+    std::cin >> num1 >> num2;
+
+    double result = (num1 > num2) ? num1 : num2;
+
+    std::cout << "The larger Nr is: " << result;
 
     return 0;
 }
