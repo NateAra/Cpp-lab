@@ -5,40 +5,33 @@
 
 
 /* Exercise
-    * Code this requirement:
-        * A Job application should be a US citizen and either hava a Bachelor degree or at least 2 years of experience.
+    * Use this chart to set the commission based on the sales
+        * Sale | Commission
+        * Up to 10,000 | 10 %
+        * 10,000 to 50,000 \ 15 %
+        * Over 50,000 | 20 %
 */
 int main() {
 
-    std::string isUSCitizenInput;
-    std::string degreeInput;
-    bool isUSCitizen;
-    bool degree;
-    int experience;
+    double tenPercent = 0.10;
+    double fifteenPercent = 0.15;
+    double twentyPercent = 0.20;
 
-    std::cout << "Are you a US Citizen? (yes/no): ";
-    std::cin >> isUSCitizenInput;
-    isUSCitizen = isUSCitizenInput == "yes" || isUSCitizenInput == "Yes";
+    int lowSales = 10'000;
+    int highSales = 15'000;
 
-    if (!isUSCitizen) {
-        std::cout << "Candidate is not eligible" << std::endl;
-        return 0;
-    }
+    int sales;
+    std::cout << "How much was the sale? ";
 
-    std::cout << "Do you have Bachelor degree? (yes/no): ";
-    std::cin >> degreeInput;
-    degree = degreeInput == "yes" || degreeInput == "Yes";
+    std::cin >> sales;
 
-    if (!degree) {
-        std::cout << "Year of Experience? ";
-        std::cin >> experience;
+    if (sales < lowSales) {
+        std::cout << sales * tenPercent << std::endl << "10% Commission";
+    } else if (sales >= lowSales && sales <= highSales) {
+        std::cout << sales * fifteenPercent << std::endl << "15% Commission";
     } else {
-        experience = 0;
+        std::cout << sales * twentyPercent << std::endl << "20% Commission";
     }
 
-
-    std::string isEligible = isUSCitizen && (degree || experience >= 2) ? "Candidate is eligible" : "Candidate is not eligible";
-
-    std::cout << isEligible;
     return 0;
 }
