@@ -13,9 +13,9 @@
 */
 int main() {
 
-    double tenPercent = 0.10;
-    double fifteenPercent = 0.15;
-    double twentyPercent = 0.20;
+    double lowCommission = 0.10;
+    double middleCommission = 0.15;
+    double highCommission = 0.20;
 
     int lowSales = 10'000;
     int highSales = 15'000;
@@ -26,11 +26,11 @@ int main() {
     std::cin >> sales;
 
     if (sales < lowSales) {
-        std::cout << sales * tenPercent << std::endl << "10% Commission";
+        std::cout << sales * lowCommission << std::endl << "10% Commission";
     } else if (sales >= lowSales && sales <= highSales) {
-        std::cout << sales * fifteenPercent << std::endl << "15% Commission";
+        std::cout << sales * middleCommission << std::endl << "15% Commission";
     } else {
-        std::cout << sales * twentyPercent << std::endl << "20% Commission";
+        std::cout << sales * highCommission << std::endl << "20% Commission";
     }
 
     return 0;
