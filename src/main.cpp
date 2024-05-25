@@ -5,28 +5,32 @@
 
 
 /* Exercise
-    * Ask the user for two numbers.
-    * Store the larger value in a separate variable and print it.
+    * Create a basic calculator.
+    * Ask the user for two numbers and an Operator.
+    * Then, print the result of applying the operator to those numbers.
 */
 int main() {
 
-    int input;
+    char op;
+    double num1;
+    double num2;
     
-    std::cout << "Enter a number between 1 - 3: ";
-    std::cin >> input;
+    std::cout << "Calculator: ";
+    std::cin >> num1 >> op >> num2;
 
-    switch (input) {
-        case 1:
-            std::cout << "You selected 1";
+    switch (op) {
+        case '+':
+            std::cout << num1 << " + " << num2 << " = " << num1 + num2;
             break;
-        case 2:
-            std::cout << "You selected 2";
+        case '-':
+            std::cout << num1 << " - " << num2 << " = " << num1 - num2;
             break;
-        case 3:
-            std::cout << "You selected 3";
+        case '*':
+            std::cout << num1 << " * " << num2 << " = " << num1 * num2;
             break;
-        default:
-            std::cout << "Goodbye";
+        case '/':
+            std::cout << num1 << " / " << num2 << " = " << num1 / num2;
+            break;
     }
 
     return 0;
