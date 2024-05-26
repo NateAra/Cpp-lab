@@ -5,33 +5,25 @@
 
 
 /* Exercise
-    * Create a basic calculator.
-    * Ask the user for two numbers and an Operator.
-    * Then, print the result of applying the operator to those numbers.
+    * Ask the user for a positive number. Print the factorial of that number.
 */
 int main() {
+    int factorial = 1;
+    int number;
 
-    char op;
-    double num1;
-    double num2;
-    
-    std::cout << "Calculator: ";
-    std::cin >> num1 >> op >> num2;
+    std::cout << "Enter the factorial number: ";
+    std::cin >> number;
 
-    switch (op) {
-        case '+':
-            std::cout << num1 << " + " << num2 << " = " << num1 + num2;
-            break;
-        case '-':
-            std::cout << num1 << " - " << num2 << " = " << num1 - num2;
-            break;
-        case '*':
-            std::cout << num1 << " * " << num2 << " = " << num1 * num2;
-            break;
-        case '/':
-            std::cout << num1 << " / " << num2 << " = " << num1 / num2;
-            break;
+    if (number < 0) {
+        std::cout << "Error!";
+    } else {
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+        std::cout << factorial << std::endl;
     }
+
+
 
     return 0;
 }
