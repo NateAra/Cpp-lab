@@ -10,23 +10,16 @@
 
 using namespace std;
 
-void increasePrice(double& price) {
-    price *= 1.2;
+void greet(const string& name) {
+    cout << "Hello " << name << "!" << endl;
 }
 
-void inPrice(double p) {
-    p *= 1.2;
-}
+
 
 int main() {
 
-    double price = 100;
-    increasePrice(price);
-    cout << price << endl; // ---> 120
-
-    double p = 100;
-    inPrice(p);
-    cout << p; // ---> 100
+    string name = "Nate";
+    greet(name);
 
     return 0;
 }
