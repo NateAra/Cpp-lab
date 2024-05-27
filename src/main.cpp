@@ -10,14 +10,16 @@
 
 int main() {
 
-    int temps[] = {60, 80, 90};
-    double average = 0;
-    int count = 0;
+    int number = 0;
 
-    for (int temp : temps) {
-        average += temp;
-        count++;
-    }    std::cout << "The average temperature in the next " << count << " days is: " << average / count;
+    while (number < 1 || number > 5) {
+        std::cout << "Number: ";
+        std::cin >> number;
+
+        if (number < 1 || number > 5) {
+            std::cout << "Enter a number between 1 and 5!" << std::endl;
+        }
+    }
 
     return 0;
 }
