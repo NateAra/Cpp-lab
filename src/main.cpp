@@ -5,19 +5,23 @@
 
 
 /* Exercise
-    *
+    * Write a program asking the user to enter a row and make this:
+        - *
+        - **
+        - ***
+        - ****
 */
 
 int main() {
+    int rows = 0;
+    std::cout << "Enter a rows: ";
+    std::cin >> rows;
 
-    while (true) {
-        std::cout << "Number: ";
-        int number;
-        std::cin >> number;
-        if (number >= 1 && number <= 5) {
-            break;
+    for (int x = 1; x <= rows ; x++) {
+        for (int y = 0; y < x; y++) {
+            std::cout << "*" ;
         }
-        std::cout << "Error! Enter a number between 1 and 5!" << std::endl;
+        std::cout << std::endl;
     }
 
     return 0;
