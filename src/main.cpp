@@ -10,13 +10,18 @@
 
 using namespace std;
 
-int maximum(int num1, int num2) {
-    return num1 > num2 ? num1 : num2;
+void greet(string name) {
+    cout << "Hello " << name;
+}
+
+void greet(string title, string name) {
+    cout << "Hello " << title << " " << name;
+
 }
 
 int main() {
 
-    std::cout << maximum(2, 5);
+    greet("Mr. ", "Nate");
 
     return 0;
 }
