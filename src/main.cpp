@@ -5,25 +5,19 @@
 
 
 /* Exercise
-    *
+    * Given a list of temperatures, write code to calculate the average temperature.
 */
+
 int main() {
-    int numbers[] = {1, 2, 3, 4};
 
-    for (int i = 0; i < sizeof(numbers) / sizeof(int ); i++) {
-        std::cout << numbers[i] << std::endl;
-    }
+    int temps[] = {60, 80, 90};
+    double average = 0;
+    int count = 0;
 
-    for (int number : numbers) {
-        std::cout << number << std::endl;
-    }
-
-    std::string name = "Natnael";
-
-    for (char ch : name) {
-        std::cout << ch << std::endl;
-    }
-
+    for (int temp : temps) {
+        average += temp;
+        count++;
+    }    std::cout << "The average temperature in the next " << count << " days is: " << average / count;
 
     return 0;
 }
