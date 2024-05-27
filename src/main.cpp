@@ -5,23 +5,28 @@
 
 
 /* Exercise
-    * Create a function that receives 2 int and returns the maximum of the two.
+    *
 */
 
 using namespace std;
 
-void greet(string name) {
-    cout << "Hello " << name;
+void increasePrice(double& price) {
+    price *= 1.2;
 }
 
-void greet(string title, string name) {
-    cout << "Hello " << title << " " << name;
-
+void inPrice(double p) {
+    p *= 1.2;
 }
 
 int main() {
 
-    greet("Mr. ", "Nate");
+    double price = 100;
+    increasePrice(price);
+    cout << price << endl; // ---> 120
+
+    double p = 100;
+    inPrice(p);
+    cout << p; // ---> 100
 
     return 0;
 }
