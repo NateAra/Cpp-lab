@@ -5,24 +5,18 @@
 
 
 /* Exercise
-    *
+    * Create a function that receives 2 int and returns the maximum of the two.
 */
 
-//using namespace std;
+using namespace std;
 
-void greet(std::string name) {
-    std::cout << "Hello, " << name << std::endl;
-}
-
-std::string fullName(std::string firstName, std::string lastName) {
-    return firstName + " " + lastName + "!";
+int maximum(int num1, int num2) {
+    return num1 > num2 ? num1 : num2;
 }
 
 int main() {
 
-    greet(fullName("Nate", "Arafayne"));
-
-    std::cout << "Done!";
+    std::cout << maximum(2, 5);
 
     return 0;
 }
