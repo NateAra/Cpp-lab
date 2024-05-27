@@ -10,16 +10,17 @@
 
 using namespace std;
 
-void greet(const string& name) {
-    cout << "Hello " << name << "!" << endl;
+const double taxRate = .2;
+
+double calculateTax(int sales) {
+    return sales * taxRate;
 }
-
-
 
 int main() {
 
-    string name = "Nate";
-    greet(name);
+    int sales = 10'000;
+    double tax = calculateTax(sales);
+    cout << tax;
 
     return 0;
 }
