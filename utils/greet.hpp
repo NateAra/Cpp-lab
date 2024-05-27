@@ -2,7 +2,10 @@
 #define UTILS_GREET
 #include "string"
 
-// Function declaration (Function prototype)
-void greet(std::string name);
+namespace messaging {
+    // Function declaration (Function prototype)
+    void greet(std::string name);
+}
+
 
 #endif
