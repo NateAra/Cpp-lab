@@ -2,7 +2,10 @@
 
 using namespace std;
 
-// Function definition
-void greet(string name) {
-    cout << "Hello " << name;
+namespace messaging {
+    // Function definition
+    void greet(string name) {
+        cout << "Hello " << name;
+    }
 }
+
