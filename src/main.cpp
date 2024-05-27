@@ -5,21 +5,21 @@
 
 
 /* Exercise
-    * Given a list of temperatures, write code to calculate the average temperature.
+    * Declare a secret number. Continuously ask the user to guess the secret number.
 */
 
 int main() {
 
+    int secret = 2;
     int number = 0;
 
-    while (number < 1 || number > 5) {
-        std::cout << "Number: ";
+    while (number != secret) {
+        std::cout << "Please Guess the number: ";
         std::cin >> number;
-
-        if (number < 1 || number > 5) {
-            std::cout << "Enter a number between 1 and 5!" << std::endl;
-        }
     }
+
+    std::cout << "Congratulation!!";
+
 
     return 0;
 }
