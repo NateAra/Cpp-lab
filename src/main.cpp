@@ -5,20 +5,24 @@
 
 
 /* Exercise
-    * Write a program asking the user to enter a row and make this:
-        - *
-        - **
-        - ***
-        - ****
+    *
 */
 
+//using namespace std;
+
 void greet(std::string name) {
-    std::cout << "Hello " << name << "!";
+    std::cout << "Hello, " << name << std::endl;
+}
+
+std::string fullName(std::string firstName, std::string lastName) {
+    return firstName + " " + lastName + "!";
 }
 
 int main() {
 
-    greet("Nate");
+    greet(fullName("Nate", "Arafayne"));
+
+    std::cout << "Done!";
 
     return 0;
 }
