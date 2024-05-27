@@ -5,24 +5,24 @@
 
 
 /* Exercise
-    * Ask the user for a positive number. Print the factorial of that number.
+    *
 */
 int main() {
-    int factorial = 1;
-    int number;
+    int numbers[] = {1, 2, 3, 4};
 
-    std::cout << "Enter the factorial number: ";
-    std::cin >> number;
-
-    if (number < 0) {
-        std::cout << "Error!";
-    } else {
-        for (int i = 1; i <= number; i++) {
-            factorial *= i;
-        }
-        std::cout << factorial << std::endl;
+    for (int i = 0; i < sizeof(numbers) / sizeof(int ); i++) {
+        std::cout << numbers[i] << std::endl;
     }
 
+    for (int number : numbers) {
+        std::cout << number << std::endl;
+    }
+
+    std::string name = "Natnael";
+
+    for (char ch : name) {
+        std::cout << ch << std::endl;
+    }
 
 
     return 0;
