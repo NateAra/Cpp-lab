@@ -1,22 +1,16 @@
 #include <iostream>
 #include "../utils/greet.hpp"
 
+void printNumbers(int numbers[], int size) {
+    for (int i = 0; i < size ; ++i) {
+        std::cout << numbers[i] << std::endl;
+    }
+}
 
 int main() {
 
     int first[] = {10, 20, 30};
-    int second[] = {10, 202, 30};
-
-    bool areEqual = true;
-
-    for (int i = 0; i < std::size(first) ; ++i) {
-        if (first[i] != second[i]) {
-            areEqual = false;
-            break;
-        }
-    }
-
-    std::cout << std::boolalpha << areEqual;
+    printNumbers(first, std::size(first));
 
     return 0;
 }
