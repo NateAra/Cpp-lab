@@ -1,16 +1,21 @@
 #include <iostream>
 #include "../utils/greet.hpp"
 
-void printNumbers(int numbers[], int size) {
-    for (int i = 0; i < size ; ++i) {
-        std::cout << numbers[i] << std::endl;
-    }
-}
 
 int main() {
 
-    int first[] = {10, 20, 30};
-    printNumbers(first, std::size(first));
+    int value[3] = {10, 20, 30};
+
+    // Structured binding
+    int x = value[0];
+    int y = value[1];
+    int z = value[2];
+
+    auto [a, b, c] = value;
+
+    std::cout << x << ", " << y << ", " << z << std::endl;
+    std::cout << a << ", " << b << ", " << c << std::endl;
+
 
     return 0;
 }
