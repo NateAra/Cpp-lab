@@ -6,31 +6,20 @@
         * Create a function that takes an array of int and sorts it.
 */
 
-void swap(int numbers[], int i, int j) {
-    int temp = numbers[i];
-    numbers[i] = numbers[j];
-    numbers[j] = temp;
-}
-
-void bubbleSort(int numbers[], int size) {
-    for (int pass = 0; pass < size; ++pass) {
-        for (int i = 1; i < size; ++i) {
-            if (numbers[i] < numbers[i - 1]) {
-                swap(numbers, i, i-1);
-            }
-        }
-    }
-}
-
 
 int main() {
 
-    int numbers[] = {3, 2, 1, 5, 4};
-    bubbleSort(numbers, std::size(numbers));
+    int matrix[2][3] = {
+            {1, 2, 3},
+            {4, 5, 6},
+    };
 
-    for (int number : numbers) {
-        std::cout << number << std::endl;
+    for (int row = 0; row < std::size(matrix); row++) {
+        for (int nums : matrix[row]) {
+            std::cout << nums << std::endl;
+        }
     }
+
 
     return 0;
 }
