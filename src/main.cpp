@@ -7,6 +7,7 @@ int main() {
     int value[3] = {10, 20, 30};
 
     // Structured binding
+    // Or Unpacking Arrays
     int x = value[0];
     int y = value[1];
     int z = value[2];
