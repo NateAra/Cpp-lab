@@ -5,15 +5,18 @@
 int main() {
 
     int first[] = {10, 20, 30};
-    int second[std::size(first)];
+    int second[] = {10, 202, 30};
 
-    for (int i = 0; i < std::size(first) ; i++) {
-        second[i] = first[i];
+    bool areEqual = true;
+
+    for (int i = 0; i < std::size(first) ; ++i) {
+        if (first[i] != second[i]) {
+            areEqual = false;
+            break;
+        }
     }
 
-    for (int number : second) {
-        std::cout << number << std::endl;
-    }
+    std::cout << std::boolalpha << areEqual;
 
     return 0;
 }
