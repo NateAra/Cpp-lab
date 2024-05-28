@@ -2,24 +2,29 @@
 #include "../utils/greet.hpp"
 
 /* Exercise
-    * Implement the bubble sort algorithm
-        * Create a function that takes an array of int and sorts it.
+    *
 */
+
+const int rows = 2;
+const int columns = 3;
+
+void printMatrix(int matrix[rows][columns]) {
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < columns; col++) {
+            std::cout << matrix[row][col] << std::endl;
+        }
+    }
+}
 
 
 int main() {
 
-    int matrix[2][3] = {
+    int matrix[rows][columns] = {
             {1, 2, 3},
             {4, 5, 6},
     };
 
-    for (int row = 0; row < std::size(matrix); row++) {
-        for (int nums : matrix[row]) {
-            std::cout << nums << std::endl;
-        }
-    }
-
+    printMatrix(matrix);
 
     return 0;
 }
