@@ -3,16 +3,16 @@
 
 using namespace std;
 
+
+void increasePrice(double* price) {
+    *price *= 1.2;
+}
+
 int main() {
-    const int x = 10;
-    const int* const ptr = &x;
+    double price = 100;
+    increasePrice(&price);
 
-    const int y = 20;
-    const int* ptr1 = &y;
-
-    int z = 30;
-    int* ptr2 = &z;
-
+    cout << price;
 
     return 0;
 }
