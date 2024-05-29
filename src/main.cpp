@@ -8,19 +8,27 @@ using namespace std;
 */
 
 int main() {
-    int numbers[] = {10, 20, 30};
-    int* ptr = numbers;
+    int x = 10;
+    int y = 20;
 
-    ptr++;
-    cout << *ptr << endl;
+    int* ptrX = &x;
+    int* ptrY = &y;
 
-    ptr--;
-    cout << *ptr << endl;
+    if (ptrX != nullptr) {
+        cout << *ptrX << endl;
+    }
 
-    // Same
-    cout << *(ptr + 1) << endl;
-    cout << ptr[1] << endl;
-    cout << numbers[1] << endl;
+    if (ptrX == ptrY) {
+        cout << "Same" << endl;
+    } else {
+        cout << "Not the same" << endl;
+    }
+
+    if (*ptrX < *ptrY) {
+        cout << *ptrY;
+    } else {
+        cout << *ptrX;
+    }
 
     return 0;
 }
