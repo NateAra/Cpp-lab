@@ -9,10 +9,9 @@ using namespace std;
 
 int main() {
     const int x = 10;
-    const int* ptr = &x;
+    const int* const ptr = &x;
 
-    int y = 20;
-    ptr = &y;
+
 
     cout << *ptr;
 
