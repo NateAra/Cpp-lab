@@ -7,17 +7,18 @@ using namespace std;
     *
 */
 
-void printNumbers(int numbers[]) {
-    numbers[0] = 5;
-}
-
-
 int main() {
     int numbers[] = {10, 20, 30};
-    printNumbers(numbers);
+    int* ptr = numbers;
 
+    ptr++;
+    cout << *ptr << endl;
 
-    cout << numbers[0];
+    ptr--;
+    cout << *ptr << endl;
+
+    cout << *(ptr + 1);
+
 
     return 0;
 }
