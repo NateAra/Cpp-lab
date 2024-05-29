@@ -17,8 +17,10 @@ int main() {
     ptr--;
     cout << *ptr << endl;
 
-    cout << *(ptr + 1);
-
+    // Same
+    cout << *(ptr + 1) << endl;
+    cout << ptr[1] << endl;
+    cout << numbers[1] << endl;
 
     return 0;
 }
