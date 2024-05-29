@@ -8,16 +8,13 @@
 using namespace std;
 
 int main() {
-    int x = 10;
+    const int x = 10;
+    const int* ptr = &x;
+
     int y = 20;
-
-    int* ptr = &x;
-    *ptr *= 2;
     ptr = &y;
-    *ptr *= 3;
 
-    cout << x << endl; // 20
-    cout << y << endl; // 60
+    cout << *ptr;
 
 
     return 0;
