@@ -4,23 +4,20 @@
 using namespace std;
 
 /* Exercise
-    * Implement the swap function for swapping two variables using pointers.
+    *
 */
 
-
-void swap(int* first, int* second) {
-    int temp = *first;
-    *first = *second;
-    *second = temp;
+void printNumbers(int numbers[]) {
+    numbers[0] = 5;
 }
 
+
 int main() {
-    int x = 10;
-    int y = 20;
+    int numbers[] = {10, 20, 30};
+    printNumbers(numbers);
 
-    swap(&x, &y);
 
-    cout << x << endl << y;
+    cout << numbers[0];
 
     return 0;
 }
