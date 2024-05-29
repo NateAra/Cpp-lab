@@ -3,16 +3,24 @@
 
 using namespace std;
 
+/* Exercise
+    * Implement the swap function for swapping two variables using pointers.
+*/
 
-void increasePrice(double* price) {
-    *price *= 1.2;
+
+void swap(int* first, int* second) {
+    int temp = *first;
+    *first = *second;
+    *second = temp;
 }
 
 int main() {
-    double price = 100;
-    increasePrice(&price);
+    int x = 10;
+    int y = 20;
 
-    cout << price;
+    swap(&x, &y);
+
+    cout << x << endl << y;
 
     return 0;
 }
