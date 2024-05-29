@@ -8,14 +8,17 @@
 using namespace std;
 
 int main() {
-    int number = 10;
+    int x = 10;
+    int y = 20;
 
-    // The address of operator
-    int* ptr = &number;
-    // Indirection (de-referencing) operator
-    *ptr = 20;
+    int* ptr = &x;
+    *ptr *= 2;
+    ptr = &y;
+    *ptr *= 3;
 
-    cout << *ptr;
+    cout << x << endl; // 20
+    cout << y << endl; // 60
+
 
     return 0;
 }
