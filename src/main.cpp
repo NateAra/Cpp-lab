@@ -4,21 +4,39 @@
 using namespace std;
 
 /* Exercise
-    *
+    * Create a temp array (Twice the size)
+    * Copy all the elements
+    * Have "numbers" pointer point to the new array
 */
 
+
 int main() {
-    // Stack
-    int numbers1[10];
+    int initialSize = 5;
+    int* numbers = new int[initialSize];
+    int entries = 0;
 
-    // Heap (Free Store)
-    int* numbers = new int[10];
+    while (true) {
+        if (entries == initialSize) {
+            // Update the initial size.
+            initialSize *= 2;
+
+            // Create a temp array (Twice the size)
+            int* temp = new int[initialSize];
+
+            copy(numbers, numbers + initialSize, temp);
+            numbers = temp;
+        }
+        cout << "Number: ";
+        cin >> numbers[entries];
+        if (cin.fail()) break;
+        entries++;
+    }
+
+    for (int i = 0; i < entries; ++i) {
+        cout << numbers[i] << endl;
+    }
+
     delete[] numbers;
-    numbers = nullptr;
 
-    int* number = new int;
-    delete number;
-    number = nullptr;
-    
     return 0;
 }
