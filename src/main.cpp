@@ -10,18 +10,38 @@ using namespace std;
 
 
 int main() {
-    unique_ptr<int> x(new int);
-    auto y = make_unique<int>(20);
-    auto numbers = make_unique<int[]>(5);
+    // String literal
+    char name[10] = "Nate";
 
-    *x = 10;
-    numbers[0] = 30;
+    // Character literal
+    name[0] = 'n';
 
-    cout << *x << endl;
-    cout << *y << endl;
-    cout << numbers[0];
+    cout << name << endl;
+    cout << name[0] << endl;
+    // String Size
+    cout << strlen(name) << endl;
 
-    // With the unique ptr there won't be a need to use delete.
+    char lastName[] = "Arafayne";
+
+    // Concatenate
+    strcat(name, " ");
+    strcat(name, lastName);
+
+    cout << name << endl;
+    cout << strlen(name) << endl; // Boundary Error (name size = 10)
+
+    // Copy
+    strcpy(name, lastName);
+
+    cout << name << endl;
+
+    // Comparing string
+    if (strcmp(name, lastName) == 0) {
+        cout << "Equal!";
+    } else {
+        cout << "Not Equal!";
+    }
+
 
     return 0;
 }
