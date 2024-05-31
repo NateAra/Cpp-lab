@@ -8,7 +8,7 @@ using namespace std;
     *
 */
 
-struct Customers {
+struct Movies {
     string title;
     int releaseYear = 0;
     bool isPopular;
@@ -16,13 +16,17 @@ struct Customers {
 
 
 int main() {
-    Customers customer {
+    Movies movie {
         "Terminator",
-        2002,
+        1990,
         true
     };
 
-    cout << customer.isPopular;
+    // Structured binding
+    auto [title, releaseYear, isPopular] {movie};
+
+    cout << title << endl;
+    cout << isPopular;
 
 
     return 0;
