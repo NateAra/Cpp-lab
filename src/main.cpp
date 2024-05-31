@@ -4,52 +4,50 @@
 
 using namespace std;
 
-struct Date {
-    int year = 1900;
-    int month = 1;
-    int day = 1;
+/*Exercise
+    * Create a structure for representing an address.
+    * Each address should have 3 members.
+        * Street
+        * City
+        * ZipCode
+    * And then Nest the Address structure within Customer Structure.
+*/
+
+struct Address {
+    string street;
+    string city;
+    int zipCode = 0;
 };
 
-struct Movies {
-    string title;
-    Date releaseDate;
-    int rating;
+struct Customers {
+    int id = 0;
+    string name;
+    string email;
+    Address address;
 };
 
 
 int main() {
-    vector<Movies> movies;
+    vector<Customers> customers;
 
-    Movies Terminator = {
-            "Terminator",
-            {
-                1990
-            },
-            6
-    };
-
-    Movies jonWick {
-        "John Wick",
+    Customers firstCus {
+        1,
+        "Nate Arafayne",
+        "Nate@gmail.com",
         {
-            2020,
-            10,
-            10
-        },
-        6
+            "Street B",
+            "Trondheim",
+            7132
+        }
     };
 
-    movies.push_back(Terminator);
-    movies.push_back(jonWick);
+    customers.push_back(firstCus);
 
-    for (const auto& movie : movies) {
-        cout << "Title: " << movie.title << endl;
-        cout << "Release-Year: " << movie.releaseDate.year << endl;
-        cout << "Rating: " << movie.rating << endl;
-        cout << "------------------" << endl;
+    for (const auto& customer : customers) {
+        cout << "ID: " << customer.id << endl;
+        cout << "Name: " << customer.name << endl;
+        cout << "City: " << customer.address.city << endl;
     }
-
-
-
 
     return 0;
 }
