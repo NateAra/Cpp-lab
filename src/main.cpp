@@ -1,5 +1,5 @@
 #include <iostream>
-#include "memory"
+#include "vector"
 #include "../utils/greet.hpp"
 
 using namespace std;
@@ -11,22 +11,33 @@ using namespace std;
 struct Movies {
     string title;
     int releaseYear = 0;
-    bool isPopular;
 };
 
 
 int main() {
-    Movies movie {
-        "Terminator",
-        1990,
-        true
+    vector<Movies> movies;
+
+    Movies Terminator = {
+            "Terminator",
+            1990
     };
 
-    // Structured binding
-    auto [title, releaseYear, isPopular] {movie};
+    Movies jonWick {
+        "John Wick",
+        2020
+    };
 
-    cout << title << endl;
-    cout << isPopular;
+    movies.push_back(Terminator);
+    movies.push_back(jonWick);
+
+    cout << movies[0].title << endl;
+
+    for (const auto& movie : movies) {
+        cout << "Title: " << movie.title << endl;
+        cout << "Release Year: " << movie.releaseYear << endl;
+    }
+
+
 
 
     return 0;
