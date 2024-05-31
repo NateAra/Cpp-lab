@@ -4,13 +4,16 @@
 
 using namespace std;
 
-/*Exercise
-    *
-*/
+struct Date {
+    int year = 1900;
+    int month = 1;
+    int day = 1;
+};
 
 struct Movies {
     string title;
-    int releaseYear = 0;
+    Date releaseDate;
+    int rating;
 };
 
 
@@ -19,22 +22,30 @@ int main() {
 
     Movies Terminator = {
             "Terminator",
-            1990
+            {
+                1990
+            },
+            6
     };
 
     Movies jonWick {
         "John Wick",
-        2020
+        {
+            2020,
+            10,
+            10
+        },
+        6
     };
 
     movies.push_back(Terminator);
     movies.push_back(jonWick);
 
-    cout << movies[0].title << endl;
-
     for (const auto& movie : movies) {
         cout << "Title: " << movie.title << endl;
-        cout << "Release Year: " << movie.releaseYear << endl;
+        cout << "Release-Year: " << movie.releaseDate.year << endl;
+        cout << "Rating: " << movie.rating << endl;
+        cout << "------------------" << endl;
     }
 
 
