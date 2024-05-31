@@ -10,37 +10,16 @@ using namespace std;
 
 
 int main() {
-    // String literal
-    char name[10] = "Nate";
+    string name = "Nate";
+    name.append(" Arafayne");
+    name.insert(4, " Tklay");
 
-    // Character literal
-    name[0] = 'n';
+    name.erase(1, 2);
+    name.replace(1, 1, "at");
 
-    cout << name << endl;
-    cout << name[0] << endl;
-    // String Size
-    cout << strlen(name) << endl;
+    name.clear();
 
-    char lastName[] = "Arafayne";
-
-    // Concatenate
-    strcat(name, " ");
-    strcat(name, lastName);
-
-    cout << name << endl;
-    cout << strlen(name) << endl; // Boundary Error (name size = 10)
-
-    // Copy
-    strcpy(name, lastName);
-
-    cout << name << endl;
-
-    // Comparing string
-    if (strcmp(name, lastName) == 0) {
-        cout << "Equal!";
-    } else {
-        cout << "Not Equal!";
-    }
+    cout << name;
 
 
     return 0;
