@@ -11,16 +11,16 @@ using namespace std;
 
 int main() {
     string name = "Nate";
-    name.append(" Arafayne");
-    name.insert(4, " Tklay");
 
-    name.erase(1, 2);
-    name.replace(1, 1, "at");
+    if (name.find('A') == -1) {
+        cout << "'A' Doesn't Exist!" << endl;
+    }
 
-    name.clear();
+    cout << name.rfind('a') << endl;
 
-    cout << name;
+    cout << name.find_first_of("etN") << endl; // Finds the first of any of the characters.
 
+    cout << name.find_last_of("Nate"); // Same as the find first of.
 
     return 0;
 }
