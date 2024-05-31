@@ -5,22 +5,31 @@
 using namespace std;
 
 /* Exercise
-    *
+    * Given the following format for customer number:
+        * 2 alphabetic characters
+        * 4 digits
+    * Write a function to validate a customer number.
 */
+
+bool isValid(string customerNumber) {
+    if (customerNumber.length() != 6)
+        return false;
+
+    if (!isalpha(customerNumber[0]) && !isalpha(customerNumber[1]))
+        return false;
+
+    for (int i = 2; i < customerNumber.length() ; ++i) {
+        if (isdigit(customerNumber[1]))
+            return false;
+    }
+    return true;
+}
 
 
 int main() {
-    string name = "Nate Tklay Arafayne";
+    string cNumber = "na2024";
 
-    auto index = name.rfind(' ');
-
-    string firstName = name.substr(0, index);
-    string lastName = name.substr(index + 1);
-
-    cout << '(' << firstName << ')' << endl;
-    cout << '(' << lastName << ')' << endl;
-
-
+    cout << boolalpha << isValid(cNumber);
 
     return 0;
 }
