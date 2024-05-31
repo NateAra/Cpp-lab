@@ -5,36 +5,24 @@
 using namespace std;
 
 /*Exercise
-    * Define a structure for representing customers with 3 attributes.
-        * ID (Number)
-        * Name
-        * Email
-    * Ask the user for these values, Store them in a Customer Object and print the result.
+    *
 */
 
 struct Customers {
-    int id;
-    string name;
-    string email;
+    string title;
+    int releaseYear = 0;
+    bool isPopular;
 };
 
 
 int main() {
-    Customers customer;
+    Customers customer {
+        "Terminator",
+        2002,
+        true
+    };
 
-    cout << "Enter customer id: ";
-    cin >> customer.id;
-    cin.ignore();
-
-    cout << "Enter customer name: ";
-    getline(cin, customer.name);
-
-    cout << "Enter customer Email: ";
-    cin >> customer.email;
-
-    cout << "ID: " << customer.id << endl;
-    cout << "Name: " << customer.name << endl;
-    cout << "Email: " << customer.email << endl;
+    cout << customer.isPopular;
 
 
     return 0;
