@@ -4,19 +4,19 @@
 
 using namespace std;
 
-/* Exercise
-    *
-*/
+struct Movie {
+    string title;
+    int releaseYear;
+};
 
 
 int main() {
-    string number = "9.99x";
-    double p = 10.40;
+    Movie movie;
+    movie.title = "Breaking Bad";
+    movie.releaseYear = 2005;
 
-    double price = stod(number);
-    string str = to_string(p);
-
-    cout << price << ", " << str;
+    cout << movie.title << endl;
+    cout << movie.releaseYear << endl;
 
 
     return 0;
