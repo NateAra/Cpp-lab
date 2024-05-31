@@ -10,17 +10,17 @@ using namespace std;
 
 
 int main() {
-    string name = "Nate";
+    string name = "Nate Tklay Arafayne";
 
-    if (name.find('A') == -1) {
-        cout << "'A' Doesn't Exist!" << endl;
-    }
+    auto index = name.rfind(' ');
 
-    cout << name.rfind('a') << endl;
+    string firstName = name.substr(0, index);
+    string lastName = name.substr(index + 1);
 
-    cout << name.find_first_of("etN") << endl; // Finds the first of any of the characters.
+    cout << '(' << firstName << ')' << endl;
+    cout << '(' << lastName << ')' << endl;
 
-    cout << name.find_last_of("Nate"); // Same as the find first of.
+
 
     return 0;
 }
