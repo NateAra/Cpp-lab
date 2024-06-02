@@ -13,7 +13,18 @@ struct ReleaseDate {
 struct Movie {
     string title;
     ReleaseDate releaseDate;
+
+    bool equals(const Movie& movie) {
+        return (
+                title == movie.title &&
+                releaseDate.year == movie.releaseDate.year &&
+                releaseDate.month == movie.releaseDate.month &&
+                releaseDate.day == movie.releaseDate.day
+        );
+
+    }
 };
+
 
 int main() {
     Movie movie1 {
@@ -34,8 +45,10 @@ int main() {
         }
     };
 
-    if (movie1.releaseDate.month == movie2.releaseDate.month) {
+    if (movie1.equals(movie2)) {
         cout << "Equal";
+    } else {
+        cout << "Not Equal";
     }
 
 
