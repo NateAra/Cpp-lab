@@ -13,17 +13,21 @@ struct ReleaseDate {
 struct Movie {
     string title;
     ReleaseDate releaseDate;
-
-    bool equals(const Movie& movie) {
-        return (
-                title == movie.title &&
-                releaseDate.year == movie.releaseDate.year &&
-                releaseDate.month == movie.releaseDate.month &&
-                releaseDate.day == movie.releaseDate.day
-        );
-
-    }
 };
+
+bool operator == (const Movie& fist, const Movie& second) {
+    return (
+            fist.title == second.title &&
+            fist.releaseDate.year == second.releaseDate.year &&
+            fist.releaseDate.month == second.releaseDate.month &&
+            fist.releaseDate.day == second.releaseDate.day
+    );
+}
+
+ostream& operator << (ostream& stream, const Movie& movie) {
+    stream << movie.title;
+    return stream;
+}
 
 
 int main() {
@@ -45,13 +49,10 @@ int main() {
         }
     };
 
-    if (movie1.equals(movie2)) {
-        cout << "Equal";
-    } else {
-        cout << "Not Equal";
-    }
+    bool isEqual = movie1 == movie2;
+    cout << boolalpha << isEqual;
 
-
+    cout << movie1;
 
     return 0;
 }
