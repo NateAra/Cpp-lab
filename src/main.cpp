@@ -4,55 +4,38 @@
 
 using namespace std;
 
-struct ReleaseDate {
-    int year = 0;
-    int month = 0;
-    int day = 0;
+/* Exercise
+    * Define a structure for representing a point.
+        * Each point should have "X" and "Y" coordination.
+        * Then overload the equality and stream insertion operators for point.
+*/
+
+struct Point {
+    int x = 0;
+    int y = 0;
 };
 
-struct Movie {
-    string title;
-    ReleaseDate releaseDate;
-};
-
-bool operator == (const Movie& fist, const Movie& second) {
+bool operator == (const Point& fist, const Point& second) {
     return (
-            fist.title == second.title &&
-            fist.releaseDate.year == second.releaseDate.year &&
-            fist.releaseDate.month == second.releaseDate.month &&
-            fist.releaseDate.day == second.releaseDate.day
+            fist.x == second.x &&
+            fist.y == second.y
     );
 }
 
-ostream& operator << (ostream& stream, const Movie& movie) {
-    stream << movie.title;
+ostream& operator << (ostream& stream, const Point& point) {
+    stream << "x: " << point.x << ", " << "Y: " << point.y;
     return stream;
 }
 
 
 int main() {
-    Movie movie1 {
-        "Jon Wick",
-        {
-            2019,
-            10,
-            10
-        }
-    };
+    Point point1 {5,6};
 
-    Movie movie2 {
-        "Tarzan",
-        {
-            2000,
-            10,
-            1
-        }
-    };
+    Point point2 {5, 6};
 
-    bool isEqual = movie1 == movie2;
-    cout << boolalpha << isEqual;
+    cout << boolalpha << (point1 == point2) << endl;
 
-    cout << movie1;
+    cout << "Point1: " << point1 << endl << "Point2: " << point2;
 
     return 0;
 }
