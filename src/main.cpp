@@ -24,15 +24,15 @@ Movie getMovie() {
     return movie;
 }
 
-void showMovieTitle(Movie& movie) {
-    cout << movie.title;
+void showMovieTitle(Movie* movie) {
+    cout << movie->title;
 }
 
 
 int main() {
 
     auto movie = getMovie();
-    showMovieTitle(movie);
+    showMovieTitle(&movie);
 
 
     return 0;
