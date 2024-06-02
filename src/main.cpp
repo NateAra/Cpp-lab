@@ -4,10 +4,16 @@
 
 using namespace std;
 
-enum Action {
-    list = 1,
-    add,
-    update
+enum class Action {
+    List = 1,
+    Add,
+    Update
+};
+
+enum class Operation {
+    List = 1,
+    Add,
+    Update
 };
 
 int main() {
@@ -22,13 +28,13 @@ int main() {
     cin >> input;
 
     switch (input) {
-        case Action::list:
+        case static_cast<int>(Action::List):
             cout << "List of Invoices";
             break;
-        case Action::add:
+        case static_cast<int>(Action::Add):
             cout << "Added Invoices";
             break;
-        case Action::update:
+        case static_cast<int>(Action::Update):
             cout << "Updated Invoices";
             break;
         default:
