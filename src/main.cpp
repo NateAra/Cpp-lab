@@ -6,15 +6,34 @@
 
 using namespace std;
 
+struct Movie {
+    int id;
+    string title;
+    int year;
+};
+
 int main() {
-    ofstream file;
+    ifstream file;
     file.open("data.csv");
+
     if (file.is_open()) {
-        // CSV: Comma Separated Value
-        file
-        << "ID,Title,Year\n"
-        << "1,Terminator,1989\n"
-        << "2,John Wick,2020";
+        string str;
+
+        while (!file.eof()) {
+            Movie movie;
+
+            getline(file, str, ',');
+            movie.id = stoi(str);
+
+            getline(file, str, ',');
+            movie.title = str;
+
+            getline(file, str);
+            movie.year = stoi(str);
+
+            cout << movie.title << endl;
+        }
+
         file.close();
     }
 
