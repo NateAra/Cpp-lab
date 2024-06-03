@@ -4,18 +4,27 @@
 
 using namespace std;
 
+int getNumber(const string& prompt) {
+    int userNumber;
+    while (true) {
+        cout << prompt;
+        cin >> userNumber;
+        if (cin.fail()) {
+            cout << "Invalid number!" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        } else {
+            break;
+        }
+    }
+    return userNumber;
+}
+
 int main() {
+    int first = getNumber("Enter first number: ");
+    int second = getNumber("Enter second number: ");
 
-    cout << "First: ";
-    int first;
-    cin >> first;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-    cout << "Second: ";
-    int second;
-    cin >> second;
-
-    cout << "You entered: " << first << " and " << second;
+    cout << "You have entered: " << first << " and " << second;
 
     return 0;
 }
