@@ -5,17 +5,19 @@
 
 using namespace std;
 
-string to_string(double number, int precision) {
-    stringstream stream;
-    stream << fixed << setprecision(precision) << number;
-    return stream.str();
-}
-
 int main() {
-    double num = 42.34;
-    string str = to_string(num, 2);
+    string str = "10 20";
 
-    cout << str;
+    stringstream stream;
+    stream.str(str);
+
+    int first;
+    stream >> first;
+
+    int second;
+    stream >> second;
+
+    cout << first << " + " << second << " = " << first + second;
 
     return 0;
 }
