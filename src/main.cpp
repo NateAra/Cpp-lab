@@ -1,30 +1,22 @@
 #include <iostream>
 #include "vector"
+#include "fstream"
+#include "iomanip"
 #include "../utils/greet.hpp"
 
 using namespace std;
 
-int getNumber(const string& prompt) {
-    int userNumber;
-    while (true) {
-        cout << prompt;
-        cin >> userNumber;
-        if (cin.fail()) {
-            cout << "Invalid number!" << endl;
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        } else {
-            break;
-        }
-    }
-    return userNumber;
-}
-
 int main() {
-    int first = getNumber("Enter first number: ");
-    int second = getNumber("Enter second number: ");
-
-    cout << "You have entered: " << first << " and " << second;
+    ofstream file;
+    file.open("data.csv");
+    if (file.is_open()) {
+        // CSV: Comma Separated Value
+        file
+        << "ID,Title,Year\n"
+        << "1,Terminator,1989\n"
+        << "2,John Wick,2020";
+        file.close();
+    }
 
     return 0;
 }
