@@ -4,45 +4,18 @@
 
 using namespace std;
 
-enum class Action {
-    List = 1,
-    Add,
-    Update
-};
-
-enum class Operation {
-    List = 1,
-    Add,
-    Update
-};
-
 int main() {
-    int input;
 
-    cout
-    << "1: List Invoices" << endl
-    << "2: Add Invoices" << endl
-    << "3: Update Invoices" << endl
-    << "Select: ";
+    cout << "First: ";
+    int first;
+    cin >> first;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    cin >> input;
+    cout << "Second: ";
+    int second;
+    cin >> second;
 
-    switch (input) {
-        case static_cast<int>(Action::List):
-            cout << "List of Invoices";
-            break;
-        case static_cast<int>(Action::Add):
-            cout << "Added Invoices";
-            break;
-        case static_cast<int>(Action::Update):
-            cout << "Updated Invoices";
-            break;
-        default:
-            cout << "Something went wrong, Please Try Again!";
-    }
-
-
-
+    cout << "You entered: " << first << " and " << second;
 
     return 0;
 }
