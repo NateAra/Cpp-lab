@@ -7,4 +7,6 @@ add_executable(Cpp_lab src/main.cpp
         utils/greet.hpp
         utils/greet.cpp
         src/classes/Rectangle.cpp
-        src/classes/Rectangle.h)
+        src/classes/Rectangle.h
+        src/Exercises/TextBox/TextBox.cpp
+        src/Exercises/TextBox/TextBox.h)
