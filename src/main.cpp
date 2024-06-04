@@ -9,10 +9,9 @@ using namespace std;
 
 int main() {
     Rectangle rectangle{};
-    rectangle.width = 10;
-    rectangle.height = 20;
+    rectangle.setWight(10);
 
-    cout << rectangle.getArea();
+    cout << rectangle.getWight();
 
     return 0;
 }
