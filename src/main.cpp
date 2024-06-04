@@ -3,15 +3,16 @@
 #include "iomanip"
 #include "../utils/greet.hpp"
 #include "classes/Rectangle.h"
+#include "Exercises/TextBox/TextBox.h"
 
 using namespace std;
 
 
 int main() {
-    Rectangle rectangle{};
-    rectangle.setWight(10);
+    TextBox textBox{};
+    textBox.setValue("Hello World");
 
-    cout << rectangle.getWight();
+    cout << textBox.getValue();
 
     return 0;
 }
