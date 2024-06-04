@@ -4,10 +4,16 @@
 
 class Rectangle {
 public:
-    int width;
-    int height;
     void draw();
     int getArea();
+    int getWight();
+    void setWight(int width);
+    int getHeight() const;
+    void setHeight(int height);
+
+private:
+    int width;
+    int height;
 };
 
 
