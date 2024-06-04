@@ -9,10 +9,9 @@ using namespace std;
 
 
 int main() {
-    TextBox textBox{};
-    textBox.setValue("Hello World");
+    Rectangle rectangle{10, 20};
 
-    cout << textBox.getValue();
+    cout << rectangle.getWight();
 
     return 0;
 }
