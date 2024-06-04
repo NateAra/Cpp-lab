@@ -29,3 +29,8 @@ void Rectangle::setHeight(int height) {
         throw std::invalid_argument("Height");
     this->height = height;
 }
+
+Rectangle::Rectangle(int width, int height) {
+    setWight(width);
+    setHeight(height);
+}
