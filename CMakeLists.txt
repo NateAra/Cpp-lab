@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(Cpp_lab src/main.cpp
         utils/greet.hpp
-        utils/greet.cpp)
+        utils/greet.cpp
+        src/classes/Rectangle.cpp
+        src/classes/Rectangle.h)
