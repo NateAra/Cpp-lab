@@ -9,4 +9,6 @@ add_executable(Cpp_lab src/main.cpp
         src/classes/Rectangle.cpp
         src/classes/Rectangle.h
         src/Exercises/textBox/TextBox.cpp
-        src/Exercises/textBox/TextBox.h)
+        src/Exercises/textBox/TextBox.h
+        src/Exercises/smartPointer/SmartPointer.cpp
+        src/Exercises/smartPointer/SmartPointer.h)
