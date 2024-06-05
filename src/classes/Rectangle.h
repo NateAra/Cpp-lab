@@ -15,11 +15,13 @@ public:
     Rectangle(const Rectangle &source);
     Rectangle(int width, int height);
     Rectangle(int width, int height, const std::string &color);
+
     void draw() const;
     int getArea() const;
     int getWidth() const;
-    void setWidth(int width);
     int getHeight() const;
+
+    void setWidth(int width);
     void setHeight(int height);
     static int getObjectCount();
 };
