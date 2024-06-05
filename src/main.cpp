@@ -5,13 +5,14 @@
 #include "../utils/greet.hpp"
 #include "classes/Rectangle.h"
 #include "Exercises/TextBox/TextBox.h"
+#include "Exercises/smartPointer/SmartPointer.h"
 
 using namespace std;
 
 
 int main() {
-    auto rectangle = make_unique<Rectangle>(10, 20);
-    rectangle->draw();
+    SmartPointer ptr{new int(10)};
+
 
     return 0;
 }
