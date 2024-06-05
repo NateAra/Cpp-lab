@@ -40,3 +40,10 @@ Rectangle::Rectangle(int width, int height, const std::string &color) : Rectangl
     std::cout << "Constructing Rectangle With Color." << std::endl;
     this->color = color;
 }
+
+Rectangle::Rectangle(const Rectangle &source) {
+    std::cout << "Rectangle Copied" << std::endl;
+    this->width = source.width;
+    this->height = source.height;
+    this->color = source.color;
+}
