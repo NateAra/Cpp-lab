@@ -3,7 +3,7 @@
 #include <iostream>
 
 /* Exercise
-    * Create a TextBox Class.
+    * Create a textBox Class.
         * - value: string
         * + getValue(): string
         * + setValue(val: string)
