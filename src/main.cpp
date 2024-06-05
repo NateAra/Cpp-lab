@@ -9,14 +9,7 @@ using namespace std;
 
 
 int main() {
-    TextBox textBox1{};
-    textBox1.setValue("Hello Nate!");
-
-    TextBox textBox2("Hello World!");
-
-    cout << textBox1.getValue() << endl;
-    cout << textBox2.getValue() << endl;
-
+    Rectangle rectangle(10, 20, "Red");
 
     return 0;
 }
