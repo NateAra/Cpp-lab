@@ -8,6 +8,7 @@ private:
     int height = 0;
 
 public:
+    Rectangle() = default;
     Rectangle(int width, int height);
     void draw();
     int getArea();
