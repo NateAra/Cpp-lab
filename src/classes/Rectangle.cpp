@@ -31,6 +31,7 @@ void Rectangle::setHeight(int height) {
 }
 
 Rectangle::Rectangle(int width, int height) {
+    objectCount++;
     std::cout << "Constructing a Rectangle" << std::endl;
     setWidth(width);
     setHeight(height);
@@ -47,3 +48,10 @@ Rectangle::Rectangle(const Rectangle &source) {
     this->height = source.height;
     this->color = source.color;
 }
+
+int Rectangle::objectCount = 0;
+
+int Rectangle::getObjectCount() {
+    return objectCount;
+}
+
