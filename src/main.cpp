@@ -7,21 +7,12 @@
 
 using namespace std;
 
-void showRectangle0(Rectangle rectangle) {
-
-}
-
-void showRectangle(Rectangle& rectangle) {
-
-}
-
 
 int main() {
-    Rectangle rectangle(10, 20, "Red");
-    Rectangle copyRectangle = rectangle;
+    Rectangle first{10, 20};
+    Rectangle second{30, 40};
 
-    showRectangle0(rectangle); // ---> Cope
-    showRectangle(rectangle); // ---> Reference
+    cout << Rectangle::getObjectCount() << endl;
 
     return 0;
 }
