@@ -20,10 +20,11 @@ public:
     Length operator+(const Length& other) const;
     Length& operator+=(const Length& other);
     Length& operator=(const Length& other);
+    Length& operator++(); // Prefix ++y
+    Length operator++(int); // PostFix y++
 };
 
 std::ostream& operator<<(std::ostream& out, const Length& length);
 std::istream & operator>>(std::istream& in, Length& length);
-
 
 #endif
