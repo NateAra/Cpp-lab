@@ -18,6 +18,8 @@ public:
     void setY(int y);
 
     bool operator==(const Point& other) const;
+    Point& operator++();
+    Point operator++(int);
 };
 
 std::ostream& operator<<(std::ostream& stream, Point& other);
