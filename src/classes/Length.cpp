@@ -1,7 +1,6 @@
 #include "Length.h"
 #include "compare"
 
-
 Length::Length(int value) : value(value) {}
 
 bool Length::operator==(const Length& other) const {

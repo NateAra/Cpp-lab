@@ -2,7 +2,6 @@
 #define CPP_LAB_LENGTH_H
 #include "compare"
 
-
 class Length {
 private:
     int value;
