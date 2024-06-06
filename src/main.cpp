@@ -9,11 +9,9 @@ using namespace std;
 
 int main() {
     Length first{10};
-    Length second{20};
 
-    if (first < second)
-        cout << "Second is greater!";
-
+    cout << first << endl;
+    cout << boolalpha << (first == 10);
 
     return 0;
 }
