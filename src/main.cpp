@@ -8,10 +8,12 @@ using namespace std;
 
 
 int main() {
-    Length first{10};
+    Length length{};
 
-    cout << first << endl;
-    cout << boolalpha << (first == 10);
+    cout << "Enter Length: ";
+    cin >> length;
+
+    cout << "Length: "<< length;
 
     return 0;
 }
