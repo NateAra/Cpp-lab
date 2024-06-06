@@ -6,11 +6,11 @@
 using namespace std;
 
 int main() {
-    Length length{};
+    Length first{10};
+    Length second{20};
+    Length third = first + second;
 
-    cout << "Enter Length: ";
-    cin >> length;
-    cout << "Length: "<< length;
+    cout << third;
 
     return 0;
 }
