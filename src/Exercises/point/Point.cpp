@@ -23,6 +23,18 @@ bool Point::operator==(const Point& other) const {
     return (x == other.x) && (y == other.y);
 }
 
+Point &Point::operator++() {
+    x++;
+    y++;
+    return *this;
+}
+
+Point Point::operator++(int) {
+    Point copy = *this;
+    operator++();
+    return copy;
+}
+
 std::ostream &operator<<(std::ostream &stream, Point &other) {
     return stream << "(" << other.getX() << ", " << other.getY() << ")";
 }
