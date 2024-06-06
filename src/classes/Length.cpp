@@ -23,6 +23,10 @@ std::strong_ordering Length::operator<=>(const Length &other) const {
     return value <=> other.value;
 }
 
+Length Length::operator+(const Length &other) const {
+    return Length(value + other.value);
+}
+
 std::ostream &operator<<(std::ostream &out, const Length &length) {
     return out << length.getValue();
 }
