@@ -17,6 +17,7 @@ public:
     bool operator==(const Length& other) const;
     bool operator==(int other) const;
     std::strong_ordering operator<=>(const Length& other) const;
+    Length operator+(const Length& other) const;
 
 };
 
