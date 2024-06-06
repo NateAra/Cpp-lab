@@ -33,5 +33,3 @@ std::istream &operator>>(std::istream &in, Length &length) {
     length.setValue(value);
     return in;
 }
-
-
