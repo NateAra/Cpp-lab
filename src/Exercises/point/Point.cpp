@@ -1,10 +1,7 @@
 #include "Point.h"
 
-bool Point::operator==(const Point& other) const {
-    return (x == other.x) && (y == other.y);
-}
-
 Point::Point(int x, int y) : x(x), y(y) {}
+
 
 int Point::getX() const {
     return x;
@@ -21,3 +18,8 @@ int Point::getY() const {
 void Point::setY(int y) {
     Point::y = y;
 }
+
+bool Point::operator==(const Point& other) const {
+    return (x == other.x) && (y == other.y);
+}
+
