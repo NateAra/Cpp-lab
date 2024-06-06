@@ -39,6 +39,17 @@ Length &Length::operator=(const Length &other) {
     return *this;
 }
 
+Length &Length::operator++() { // Prefix ++y
+    value++;
+    return *this;
+}
+
+Length Length::operator++(int) { // Postfix y++
+    Length copy = *this;
+    operator++();
+    return copy;
+}
+
 std::ostream &operator<<(std::ostream &out, const Length &length) {
     return out << length.getValue();
 }
