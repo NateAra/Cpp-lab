@@ -19,7 +19,7 @@ public:
     std::strong_ordering operator<=>(const Length& other) const;
     Length operator+(const Length& other) const;
     Length& operator+=(const Length& other);
-
+    Length& operator=(const Length& other);
 };
 
 std::ostream& operator<<(std::ostream& out, const Length& length);
