@@ -23,7 +23,15 @@ std::strong_ordering Length::operator<=>(const Length &other) const {
     return value <=> other.value;
 }
 
-
-std::ostream &operator<<(std::ostream &stream, const Length &length) {
-    return stream << length.getValue();
+std::ostream &operator<<(std::ostream &out, const Length &length) {
+    return out << length.getValue();
 }
+
+std::istream &operator>>(std::istream &in, Length &length) {
+    int value;
+    in >> value;
+    length.setValue(value);
+    return in;
+}
+
+
