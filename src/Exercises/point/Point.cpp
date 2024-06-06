@@ -23,3 +23,6 @@ bool Point::operator==(const Point& other) const {
     return (x == other.x) && (y == other.y);
 }
 
+std::ostream &operator<<(std::ostream &stream, Point &other) {
+    return stream << "(" << other.getX() << ", " << other.getY() << ")";
+}
