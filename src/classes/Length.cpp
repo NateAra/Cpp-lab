@@ -1,5 +1,6 @@
 #include "Length.h"
 #include "compare"
+#include "iostream"
 
 Length::Length(int value) : value(value) {}
 
@@ -29,6 +30,12 @@ Length Length::operator+(const Length &other) const {
 
 Length &Length::operator+=(const Length &other) {
     value += other.value;
+    return *this;
+}
+
+Length &Length::operator=(const Length &other) {
+    std::cout << "Object Assigned" << std::endl;
+    value = other.value;
     return *this;
 }
 
