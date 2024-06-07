@@ -1,17 +1,9 @@
 #ifndef CPP_LAB_TEXTBOX_H
 #define CPP_LAB_TEXTBOX_H
 #include <iostream>
+#include "../../classes/Inheritance_Polymorphism/Widget.h"
 
-/* Exercise
-    * Create a textBox Class.
-        * - value: string
-        * + getValue(): string
-        * + setValue(val: string)
-        * + Default Constructor
-        * + Constructor (string)
-*/
-
-class TextBox {
+class TextBox : public Widget {
 private:
     std::string value;
 public:
@@ -22,6 +14,5 @@ public:
     void setValue(const std::string &value);
 
 };
-
 
 #endif
