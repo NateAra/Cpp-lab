@@ -12,3 +12,7 @@ SmartPointer::~SmartPointer() {
     delete ptr;
     ptr = nullptr;
 }
+
+int &SmartPointer::operator*() {
+    return *ptr;
+}
