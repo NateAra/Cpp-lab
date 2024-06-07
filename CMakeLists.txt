@@ -17,4 +17,6 @@ add_executable(Cpp_lab src/main.cpp
         src/classes/Length.cpp
         src/classes/Length.h
         src/classes/Array.cpp
-        src/classes/Array.h)
+        src/classes/Array.h
+        src/classes/Inheritance_Polymorphism/Widget.cpp
+        src/classes/Inheritance_Polymorphism/Widget.h)
