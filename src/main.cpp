@@ -1,23 +1,20 @@
 #include <iostream>
-#include "classes/Rectangle.h"
-#include "classes/Length.h"
-#include "Exercises/smartPointer/SmartPointer.h"
-#include "classes/Array.h"
+#include "vector"
 #include "Exercises/textBox/TextBox.h"
 #include "Exercises/checkBox/CheckBox.h"
-#include "Exercises/inheritance_shape/Circle.h"
+#include "classes/Inheritance_Polymorphism/Widget.h"
 
 using namespace std;
 
-void showWidget(Widget& widget) {
-    widget.draw();
-}
-
 int main() {
-    TextBox box;
-    CheckBox cBox;
-    showWidget(box);
-    showWidget(cBox);
+    vector<unique_ptr<Widget>> widgets;
+    widgets.push_back(make_unique<TextBox>());
+    widgets.push_back(make_unique<CheckBox>());
+
+    for (const auto& widget : widgets) {
+        widget->draw();
+    }
+
 
 
 
