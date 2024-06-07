@@ -12,7 +12,3 @@ void Widget::disable() {
 bool Widget::isEnabled() const {
     return enabled;
 }
-
-void Widget::draw() const {
-    std::cout << "Drawing a Widget" << std::endl;
-}

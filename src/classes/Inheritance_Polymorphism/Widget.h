@@ -6,8 +6,9 @@ private:
     bool enabled;
 
 public:
-    virtual void draw() const;
     virtual ~Widget() = default;
+    // Pure virtual method
+    virtual void draw() const = 0;
     void enable();
     void disable();
     bool isEnabled() const;
