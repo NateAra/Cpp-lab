@@ -1,16 +1,18 @@
 #include <iostream>
 #include "classes/Rectangle.h"
 #include "classes/Length.h"
-#include "Exercises/point/Point.h"
+#include "Exercises/smartPointer/SmartPointer.h"
+#include "classes/Array.h"
+#include "Exercises/textBox/TextBox.h"
 
 using namespace std;
 
 int main() {
-    Length first{10};
-    Length second{20};
-    Length third = first + second;
+    TextBox txt{};
+    txt.disable();
 
-    cout << third;
+    cout << txt.isEnabled();
+
 
     return 0;
 }
