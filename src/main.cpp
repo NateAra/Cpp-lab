@@ -4,14 +4,19 @@
 #include "Exercises/smartPointer/SmartPointer.h"
 #include "classes/Array.h"
 #include "Exercises/textBox/TextBox.h"
+#include "Exercises/inheritance_shape/Circle.h"
 
 using namespace std;
 
 int main() {
-    TextBox txt{};
-    txt.disable();
+    Rectangle rectangle{};
+    Circle circle{};
 
-    cout << txt.isEnabled();
+    rectangle.setBackground("Blue");
+    circle.setBackground("Black");
+
+    cout << rectangle.getBackground() << endl;
+    cout << circle.getBackground() << endl;
 
 
     return 0;
