@@ -6,6 +6,7 @@
 class CheckBox : public TextBox {
 public:
     void draw() const override;
+    ~CheckBox() override;
 };
 
 #endif

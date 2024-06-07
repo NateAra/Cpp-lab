@@ -7,6 +7,7 @@ private:
 
 public:
     virtual void draw() const;
+    virtual ~Widget() = default;
     void enable();
     void disable();
     bool isEnabled() const;

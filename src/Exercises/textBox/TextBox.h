@@ -9,6 +9,7 @@ private:
 
 public:
     void draw() const override;
+    ~TextBox() override;
     const std::string &getValue() const;
     void setValue(const std::string &value);
 };

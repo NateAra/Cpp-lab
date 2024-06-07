@@ -12,3 +12,7 @@ void TextBox::setValue(const std::string &val) {
 void TextBox::draw() const {
     std::cout << "Drawing a TextBox" << std::endl;
 }
+
+TextBox::~TextBox() {
+    std::cout << "Destructing TextBox" << std::endl;
+}
