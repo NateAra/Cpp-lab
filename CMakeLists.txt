@@ -15,4 +15,6 @@ add_executable(Cpp_lab src/main.cpp
         src/Exercises/point/Point.cpp
         src/Exercises/point/Point.h
         src/classes/Length.cpp
-        src/classes/Length.h)
+        src/classes/Length.h
+        src/classes/Array.cpp
+        src/classes/Array.h)
