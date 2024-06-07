@@ -6,6 +6,7 @@ private:
     bool enabled;
 
 public:
+    virtual void draw() const;
     void enable();
     void disable();
     bool isEnabled() const;
