@@ -8,6 +8,7 @@ private:
     std::string value;
 
 public:
+    void draw() const override;
     const std::string &getValue() const;
     void setValue(const std::string &value);
 };
