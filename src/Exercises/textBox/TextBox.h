@@ -8,7 +8,7 @@ private:
     std::string value;
 
 public:
-    void draw() const override;
+    void draw() const override final;
     ~TextBox() override;
     const std::string &getValue() const;
     void setValue(const std::string &value);
