@@ -50,6 +50,10 @@ Length Length::operator++(int) { // Postfix y++
     return copy;
 }
 
+Length::operator int() const {
+    return value;
+}
+
 std::ostream &operator<<(std::ostream &out, const Length &length) {
     return out << length.getValue();
 }
