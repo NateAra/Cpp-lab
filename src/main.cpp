@@ -9,15 +9,6 @@
 using namespace std;
 
 int main() {
-    Rectangle rectangle{};
-    Circle circle{};
-
-    rectangle.setBackground("Blue");
-    circle.setBackground("Black");
-
-    cout << rectangle.getBackground() << endl;
-    cout << circle.getBackground() << endl;
-
-
+    
     return 0;
 }
