@@ -23,4 +23,6 @@ add_executable(Cpp_lab src/main.cpp
         src/Exercises/inheritance_shape/Shape.cpp
         src/Exercises/inheritance_shape/Shape.h
         src/Exercises/inheritance_shape/Circle.cpp
-        src/Exercises/inheritance_shape/Circle.h)
+        src/Exercises/inheritance_shape/Circle.h
+        src/Exercises/checkBox/CheckBox.cpp
+        src/Exercises/checkBox/CheckBox.h)
