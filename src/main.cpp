@@ -8,7 +8,13 @@
 
 using namespace std;
 
+void showWidget(Widget& widget) {
+    widget.draw();
+}
+
 int main() {
+    TextBox box;
+    showWidget(box);
 
     return 0;
 }
