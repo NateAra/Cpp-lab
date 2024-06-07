@@ -10,6 +10,8 @@ public:
     explicit SmartPointer(int* ptr);
     ~SmartPointer();
 
+    int& operator*();
+
 };
 
 
