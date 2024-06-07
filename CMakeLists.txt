@@ -19,4 +19,8 @@ add_executable(Cpp_lab src/main.cpp
         src/classes/Array.cpp
         src/classes/Array.h
         src/classes/Inheritance_Polymorphism/Widget.cpp
-        src/classes/Inheritance_Polymorphism/Widget.h)
+        src/classes/Inheritance_Polymorphism/Widget.h
+        src/Exercises/inheritance_shape/Shape.cpp
+        src/Exercises/inheritance_shape/Shape.h
+        src/Exercises/inheritance_shape/Circle.cpp
+        src/Exercises/inheritance_shape/Circle.h)
