@@ -1,9 +1,10 @@
 #ifndef CPP_LAB_RECTANGLE_H
 #define CPP_LAB_RECTANGLE_H
 #include "string"
+#include "../Exercises/inheritance_shape/Shape.h"
 
 
-class Rectangle {
+class Rectangle : public Shape{
 private:
     int width = 0;
     int height = 0;
