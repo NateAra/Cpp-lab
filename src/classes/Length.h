@@ -22,6 +22,7 @@ public:
     Length& operator=(const Length& other);
     Length& operator++(); // Prefix ++y
     Length operator++(int); // PostFix y++
+    explicit operator int() const;
 };
 
 std::ostream& operator<<(std::ostream& out, const Length& length);
