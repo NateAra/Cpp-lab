@@ -4,11 +4,11 @@
 class Widget {
 private:
     bool enabled;
+
 public:
     void enable();
     void disable();
     bool isEnabled() const;
-
 };
 
 #endif
