@@ -25,4 +25,10 @@ add_executable(Cpp_lab src/main.cpp
         src/Exercises/inheritance_shape/Circle.cpp
         src/Exercises/inheritance_shape/Circle.h
         src/Exercises/checkBox/CheckBox.cpp
-        src/Exercises/checkBox/CheckBox.h)
+        src/Exercises/checkBox/CheckBox.h
+        src/Exercises/DateTime/Date.cpp
+        src/Exercises/DateTime/Date.h
+        src/Exercises/DateTime/Time.cpp
+        src/Exercises/DateTime/Time.h
+        src/Exercises/DateTime/DateTime.cpp
+        src/Exercises/DateTime/DateTime.h)
