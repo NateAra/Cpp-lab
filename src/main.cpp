@@ -1,14 +1,20 @@
 #include <iostream>
 #include "vector"
-#include "Exercises/DateTime/DateTime.h"
+#include "classes/Rectangle.h"
 
 using namespace std;
 
 int main() {
-    Date date{2024, 10, 4};
-    Time time{11, 25, 45};
+    try {
+        cout << "Width: ";
+        int width;
+        cin >> width;
 
-    DateTime dateTime{2024, 8, 8, 12, 12, 12};
+        Rectangle rect;
+        rect.setWidth(width);
+    } catch (const invalid_argument& ex) {
+        cout << ex.what();
+    }
 
     return 0;
 }
