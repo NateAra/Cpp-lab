@@ -17,6 +17,8 @@ int Rectangle::getWidth() const {
 void Rectangle::setWidth(int width) {
     if (width < 0)
         throw std::invalid_argument("The Width cannot be negative!");
+    if (width > 100)
+        throw std::out_of_range("The Width cannot be greater than 100!");
     this->width = width;
 }
 
