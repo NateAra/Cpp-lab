@@ -12,7 +12,7 @@ int main() {
 
         Rectangle rect;
         rect.setWidth(width);
-    } catch (const invalid_argument& ex) {
+    } catch (const logic_error& ex) {
         cout << ex.what();
     }
 
