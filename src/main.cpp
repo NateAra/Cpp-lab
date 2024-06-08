@@ -1,22 +1,14 @@
 #include <iostream>
 #include "vector"
-#include "Exercises/textBox/TextBox.h"
-#include "Exercises/checkBox/CheckBox.h"
-#include "classes/Inheritance_Polymorphism/Widget.h"
+#include "Exercises/DateTime/DateTime.h"
 
 using namespace std;
 
 int main() {
-    vector<unique_ptr<Widget>> widgets;
-    widgets.push_back(make_unique<TextBox>());
-    widgets.push_back(make_unique<CheckBox>());
+    Date date{2024, 10, 4};
+    Time time{11, 25, 45};
 
-    for (const auto& widget : widgets) {
-        widget->draw();
-    }
-
-
-
+    DateTime dateTime{2024, 8, 8, 12, 12, 12};
 
     return 0;
 }
