@@ -2,15 +2,28 @@
 #include "vector"
 #include "classes/Rectangle.h"
 
-void createRectangle() {
-    Rectangle react;
-    react.setWidth(-1);
-}
-
 using namespace std;
 
-int main() {
+void createRectangle() {
+    try {
+        Rectangle react;
+        react.setWidth(-1);
+    } catch (const invalid_argument& ex) {
+        cout << "Close the file" << endl;
+        throw;
+    }
+}
 
+void doWork() {
+    createRectangle();
+}
+
+int main() {
+    try {
+        doWork();
+    } catch (const exception& ex) {
+        cout << ex.what();
+    }
 
     return 0;
 }
